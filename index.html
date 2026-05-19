@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +8,11 @@
 <meta name="author" content="VJC Overseas">
 <title>VJC Overseas | Australia PR & Visa Experts</title>
 
-<!-- Font Awesome 6 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- AOS Library -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<link href="style.css" rel="stylesheet">
 
 
 </head>
@@ -26,22 +21,18 @@
 <!-- ========== NAVBAR ========== -->
 <nav class="navbar" data-aos="fade-down">
     <div class="logo" onclick="location.href='#'">
-        <div class="logo-text">VJC Overseas</div>
-        <div class="logo-sub">IMMIGRATION & VISA CONSULTANTS</div>
-    </div>
-    
-    <button class="menu-toggle" id="mobileMenuToggle" aria-label="Menu">
-        <i class="fas fa-bars"></i>
-    </button>
-
+    <img src="./images/logoimagefinally1.png" alt="VJC Overseas Logo" class="logo-img">
+</div>
+    <button class="menu-toggle" id="mobileMenuToggle" aria-label="Menu"><i class="fas fa-bars"></i></button>
     <div class="nav-wrapper" id="navWrapper">
         <div class="nav-links">
             <a href="#" class="active">Home</a>
             <a href="#about">About Us</a>
             <a href="#pr">Australia PR</a>
             <a href="#services">Visa Services</a>
+            <a href="#pr-process">PR Process</a>
             <a href="#testimonials">Success Stories</a>
-            <a href="#contact">Contact</a>
+            
         </div>
         <a href="tel:+919160449000" class="call-btn btn-pulse"><i class="fas fa-phone-alt"></i> +91 9160449000</a>
     </div>
@@ -50,79 +41,115 @@
 <!-- ========== HERO SECTION ========== -->
 <section class="hero" id="home">
     <div class="hero-content" data-aos="fade-right">
-        <h1>
-            Your Dream.<br>
-            Our Expertise.<br>
-            <span>Your Future in Australia.</span>
-        </h1>
+        <h1>Your Dream.<br>Our Expertise.<br><span>Australia PR Starts here.</span></h1>
         <p>Australia PR | Skilled Migration | Better Future</p>
         <ul class="hero-points">
-            <li><i class="fas fa-check-circle"></i> MARA Registered Migration Agents</li>
+            <li><i class="fas fa-check-circle"></i> Professional Involvement in your visa</li>
             <li><i class="fas fa-file-signature"></i> 100% Transparent Process</li>
             <li><i class="fas fa-chart-line"></i> High Success Rate</li>
             <li><i class="fas fa-hands-helping"></i> End-to-End Support</li>
         </ul>
-        <a href="#contact" class="consult-btn"><i class="fas fa-calendar-check"></i> Book Free Consultation</a>
+        <a href="#formfill" class="consult-btn"><i class="fas fa-calendar-check"></i> Book Free Consultation</a>
     </div>
 
-    <div class="form-box" data-aos="fade-left">
-        <h2>Check Your <span>Australia PR</span> Eligibility</h2>
-        <form id="eligibilityForm">
-            <input type="text" id="fullName" placeholder="Full Name" required>
-            <input type="email" id="email" placeholder="Email Address" required>
-            <input type="tel" id="phone" placeholder="Phone Number" required>
-          <div class="date-field">
-    <input type="text" id="appointmentText" placeholder="Book Your Appointment Date"
-           onfocus="(this.type='date')" 
-           onblur="if(!this.value)this.type='text'" required>
-</div>
-            <select id="visaType" required>
-                <option value="">Select Preferred Visa</option>
-                <option value="Skilled Independent Visa">Skilled Independent Visa</option>
-                <option value="Student Visa">Student Visa</option>
-                <option value="Business Visa">Business Visa</option>
-                <option value="Tourist Visa">Tourist Visa</option>
-                <option value="Family Visa">Family & Partner Visa</option>
-            </select>
-            <button class="submit-btn" type="submit"><i class="fas fa-paper-plane"></i> Check My Eligibility</button>
-        </form>
+    <!-- ===== PROFESSIONAL FORM (NEW LAYOUT, ORIGINAL COLOURS) ===== -->
+    <section class="formfill" id="formfill">
+        <div class="form-box" data-aos="fade-left">
+
+        <!-- Header bar -->
+        <div class="form-card-header">
+            <h3>SIGN UP & GET <span>AUSTRALIA PR</span> ASSESSMENT</h3>
+            <p>Secure &nbsp;·&nbsp; Confidential &nbsp;·&nbsp; No spam</p>
+        </div>
+
+        <div class="form-body">
+            <form id="eligibilityForm">
+
+                <!-- Name -->
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="input-group">
+                    <i class="fas fa-phone-alt"></i>
+                    <input type="tel" id="phone" placeholder="Phone number" required>
+                </div>
+
+                <!-- Email -->
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email address" required>
+                </div>
+
+                <!-- Resume Upload -->
+                <div class="upload-section">
+                    <label>Upload Resume</label>
+                    <div class="upload-box" onclick="document.getElementById('resumeUpload').click()">
+                        <button type="button">Choose File</button>
+                        <span id="fileName">No file chosen</span>
+                        <input type="file" id="resumeUpload" accept=".pdf,.doc,.docx" hidden>
+                    </div>
+                </div>
+
+                <!-- Age -->
+                <div class="radio-group">
+                    <label>Age</label>
+                    <div class="radio-options">
+                        <label class="option-card"><input type="radio" name="age" value="18-24"> <span>18–24</span></label>
+                        <label class="option-card"><input type="radio" name="age" value="25-32"> <span>25–32</span></label>
+                        <label class="option-card"><input type="radio" name="age" value="33-39"> <span>33–39</span></label>
+                        <label class="option-card"><input type="radio" name="age" value="40+"> <span>40+</span></label>
+                    </div>
+                </div>
+
+                <!-- Qualification -->
+                <div class="radio-group">
+                    <label>Qualification</label>
+                    <div class="radio-options">
+                        <label class="option-card"><input type="radio" name="qualification" value="PhD"> <span>PhD</span></label>
+                        <label class="option-card"><input type="radio" name="qualification" value="Master's"> <span>Master's</span></label>
+                        <label class="option-card"><input type="radio" name="qualification" value="Bachelor's" checked> <span>Bachelor's</span></label>
+                        <label class="option-card"><input type="radio" name="qualification" value="Diploma"> <span>Diploma</span></label>
+                        <label class="option-card"><input type="radio" name="qualification" value="<12 yrs"> <span>&lt;12 yrs</span></label>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="radio-group">
+                    <label>Experience</label>
+                    <div class="radio-options">
+                        <label class="option-card"><input type="radio" name="experience" value="0–1 yr"> <span>0–1 yr</span></label>
+                        <label class="option-card"><input type="radio" name="experience" value="2–3 yrs"> <span>2–3 yrs</span></label>
+                        <label class="option-card"><input type="radio" name="experience" value="4–5 yrs" checked> <span>4–5 yrs</span></label>
+                        <label class="option-card"><input type="radio" name="experience" value="6+ yrs"> <span>6+ yrs</span></label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Check My PR Eligibility <i class="fas fa-arrow-right"></i></button>
+                <div class="secure-text"><i class="fas fa-lock"></i> Secure · Confidential · No spam</div>
+
+            </form>
+        </div>
     </div>
+    </section>
 </section>
 
 <!-- ========== FEATURES ========== -->
 <section class="features" data-aos="fade-up">
-    <div class="feature" data-aos="zoom-in" data-aos-delay="100">
-        <i class="fas fa-star-of-life"></i>
-        <h3>Australia PR Experts</h3>
-        <p>Specialized in Australian Immigration & PR Visas</p>
-    </div>
-    <div class="feature" data-aos="zoom-in" data-aos-delay="150">
-        <i class="fas fa-user-check"></i>
-        <h3>Personalized Guidance</h3>
-        <p>Tailored strategies for better outcomes</p>
-    </div>
-    <div class="feature" data-aos="zoom-in" data-aos-delay="200">
-        <i class="fas fa-trophy"></i>
-        <h3>High Success Rate</h3>
-        <p>Proven track record of successful visas</p>
-    </div>
-    <div class="feature" data-aos="zoom-in" data-aos-delay="250">
-        <i class="fas fa-headset"></i>
-        <h3>End-to-End Support</h3>
-        <p>From assessment to visa grant and beyond</p>
-    </div>
-    <div class="feature" data-aos="zoom-in" data-aos-delay="300">
-        <i class="fas fa-shield-alt"></i>
-        <h3>Trust & Transparency</h3>
-        <p>Honest advice with complete transparency</p>
-    </div>
+    <div class="feature" data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-star-of-life"></i><h3>Australia PR Experts</h3><p>Specialized in Australian Immigration & PR Visas</p></div>
+    <div class="feature" data-aos="zoom-in" data-aos-delay="150"><i class="fas fa-user-check"></i><h3>Personalized Guidance</h3><p>Tailored strategies for better outcomes</p></div>
+    <div class="feature" data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-trophy"></i><h3>High Success Rate</h3><p>Proven track record of successful visas</p></div>
+    <div class="feature" data-aos="zoom-in" data-aos-delay="250"><i class="fas fa-headset"></i><h3>End-to-End Support</h3><p>From assessment to visa grant and beyond</p></div>
+    <div class="feature" data-aos="zoom-in" data-aos-delay="300"><i class="fas fa-shield-alt"></i><h3>Trust & Transparency</h3><p>Honest advice with complete transparency</p></div>
 </section>
 
-<!-- ========== ABOUT SECTION ========== -->
+<!-- ========== ABOUT ========== -->
 <section class="about-section" id="about">
     <div class="about-container">
         <div class="about-image" data-aos="fade-right">
-            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1974&auto=format&fit=crop" alt="About VJC Overseas">
+            <img src="./images/vjc1.png" alt="About VJC Overseas">
         </div>
         <div class="about-content" data-aos="fade-left">
             <span class="about-tag">ABOUT VJC OVERSEAS</span>
@@ -130,24 +157,22 @@
             <p>VJC Overseas is one of the leading immigration and visa consultancy firms helping students, professionals, and families achieve their dream of settling in Australia.</p>
             <p>Our experienced consultants provide complete support for Australia PR, student visas, employer-sponsored visas, tourist visas, and business migration services.</p>
             <div class="about-points">
-                <div class="about-point"><i class="fas fa-check-circle"></i> MARA Registered Experts</div>
+                <div class="about-point"><i class="fas fa-check-circle"></i> Professional Involvement in your visa </div>
                 <div class="about-point"><i class="fas fa-check-circle"></i> Transparent Process</div>
                 <div class="about-point"><i class="fas fa-check-circle"></i> High Visa Success Rate</div>
                 <div class="about-point"><i class="fas fa-check-circle"></i> End-to-End Guidance</div>
             </div>
-            <a href="#contact" class="about-btn">Get Free Consultation</a>
+            <a href="#formfill" class="about-btn">Get Free Consultation</a>
         </div>
     </div>
 </section>
 
-<!-- ========== AUSTRALIA PR SECTION ========== -->
+<!-- ========== AUSTRALIA PR ========== -->
 <section class="pr-section" id="pr">
-    <div class="section-title" data-aos="fade-up">
-        <h2>Australia Permanent Residency (PR)</h2>
-    </div>
+    <div class="section-title" data-aos="fade-up"><h2>Australia Permanent Residency (PR)</h2></div>
     <div class="pr-container">
         <div class="pr-image" data-aos="fade-right">
-            <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=2070&auto=format&fit=crop" alt="Australia PR">
+            <img src="./images/vjc22.png" alt="Australia PR">
         </div>
         <div class="pr-content" data-aos="fade-left">
             <h3>Build Your Future in Australia</h3>
@@ -158,71 +183,304 @@
                 <div class="benefit-card"><i class="fas fa-heartbeat"></i><h4>Healthcare Access</h4><p>World-class healthcare system.</p></div>
                 <div class="benefit-card"><i class="fas fa-passport"></i><h4>Citizenship Pathway</h4><p>Become eligible for citizenship.</p></div>
             </div>
-            <a href="#contact" class="pr-btn">Apply for Australia PR →</a>
+            <a href="#formfill" class="pr-btn">Apply for Australia PR →</a>
         </div>
     </div>
 </section>
 
-<!-- ========== SERVICES SECTION ========== -->
+<!-- ========== PR PATHWAYS ========== -->
+<section class="pr-pathways-section">
+    <div class="section-title" data-aos="fade-up"><h2>Australia PR Pathways for <span>Indians</span></h2></div>
+    <div class="pathways-container">
+        <div class="pathway-card" data-aos="fade-up">
+            <div class="pathway-number orange">01</div>
+            <h3>Skilled Independent Visa <span>(Subclass 189)</span></h3>
+            <p>A points-based permanent residency visa for highly skilled professionals. No employer or state sponsorship required.</p>
+            <div class="pathway-features"><span><i class="fas fa-check"></i> Direct PR</span><span><i class="fas fa-check"></i> Work anywhere in Australia</span></div>
+        </div>
+        <div class="pathway-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="pathway-number blue">02</div>
+            <h3>Skilled Nominated Visa <span>(Subclass 190)</span></h3>
+            <p>Permanent residency for skilled workers nominated by an Australian state or territory government.</p>
+            <div class="pathway-features"><span><i class="fas fa-check"></i> State nomination</span><span><i class="fas fa-check"></i> Extra PR points</span></div>
+        </div>
+        <div class="pathway-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="pathway-number green">03</div>
+            <h3>Skilled Work Regional Visa <span>(Subclass 491)</span></h3>
+            <p>A regional pathway that allows skilled migrants to live and work in designated regional areas with a route to PR.</p>
+            <div class="pathway-features"><span><i class="fas fa-check"></i> Regional benefits</span><span><i class="fas fa-check"></i> PR pathway</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
 <section class="services" id="services">
-    <div class="section-title" data-aos="fade-up">
-        <h2>Our Australia PR & Visa Services</h2>
-    </div>
+    <div class="section-title" data-aos="fade-up"><h2>Our Australia PR & Visa Services</h2></div>
     <div class="service-grid">
-        <div class="service-card" data-aos="flip-up" data-aos-duration="600"><i class="fas fa-briefcase"></i><h3>Skilled Independent Visa</h3><p>189, 190, 491 visas for skilled professionals.</p></div>
-        <div class="service-card" data-aos="flip-up" data-aos-duration="600" data-aos-delay="80"><i class="fas fa-building"></i><h3>Employer Sponsored Visa</h3><p>186, 482, 494 visas for job opportunities.</p></div>
-        <div class="service-card" data-aos="flip-up" data-aos-duration="600" data-aos-delay="160"><i class="fas fa-heart"></i><h3>Family & Partner Visa</h3><p>Reunite with your loved ones in Australia.</p></div>
-        <div class="service-card" data-aos="flip-up" data-aos-duration="600" data-aos-delay="240"><i class="fas fa-graduation-cap"></i><h3>Student Visa</h3><p>Study in Australia and build your future.</p></div>
-        <div class="service-card" data-aos="flip-up" data-aos-duration="600" data-aos-delay="320"><i class="fas fa-chart-pie"></i><h3>Business & Investor Visa</h3><p>188, 132, 888 visas for investors.</p></div>
-        <div class="service-card" data-aos="flip-up" data-aos-duration="600" data-aos-delay="400"><i class="fas fa-umbrella-beach"></i><h3>Visitor / Tourist Visa</h3><p>Explore Australia for tourism.</p></div>
+        <div class="service-card" data-aos="flip-up"><i class="fas fa-briefcase"></i><h3>Skilled Independent Visa</h3><p>189, 190, 491 visas for skilled professionals.</p></div>
+        <div class="service-card" data-aos="flip-up" data-aos-delay="80"><i class="fas fa-building"></i><h3>Employer Sponsored Visa</h3><p>186, 482, 494 visas for job opportunities.</p></div>
+        <div class="service-card" data-aos="flip-up" data-aos-delay="160"><i class="fas fa-heart"></i><h3>Family & Partner Visa</h3><p>Reunite with your loved ones in Australia.</p></div>
+        <div class="service-card" data-aos="flip-up" data-aos-delay="240"><i class="fas fa-graduation-cap"></i><h3>Student Visa</h3><p>Study in Australia and build your future.</p></div>
+        <div class="service-card" data-aos="flip-up" data-aos-delay="320"><i class="fas fa-chart-pie"></i><h3>Business & Investor Visa</h3><p>188, 132, 888 visas for investors.</p></div>
+        <div class="service-card" data-aos="flip-up" data-aos-delay="400"><i class="fas fa-umbrella-beach"></i><h3>Visitor / Tourist Visa</h3><p>Explore Australia for tourism.</p></div>
     </div>
 </section>
 
-<!-- ========== PROCESS SECTION ========== -->
-<section class="process-section">
+<!-- ========== TIMELINE PROCESS ========== -->
+<section class="timeline-process-section" id="pr-process">
     <div class="section-title" data-aos="fade-up">
-        <h2>Our Simple 5-Step Process</h2>
+        <h2>Australia PR Process Guidance</h2>
+        <p>Explore different pathways to Australian permanent residency.</p>
     </div>
-    <div class="process-grid">
-        <div class="process-card" data-aos="fade-right"><div class="step-number">1</div><i class="fas fa-calendar-alt process-icon"></i><h3>Free Consultation</h3><p>Book a consultation with our MARA registered experts.</p></div>
-        <div class="process-card" data-aos="fade-right" data-aos-delay="100"><div class="step-number">2</div><i class="fas fa-clipboard-list process-icon"></i><h3>Eligibility Assessment</h3><p>Thorough review of your profile and visa options.</p></div>
-        <div class="process-card" data-aos="fade-right" data-aos-delay="150"><div class="step-number">3</div><i class="fas fa-folder-open process-icon"></i><h3>Document Preparation</h3><p>We guide you through every document required.</p></div>
-        <div class="process-card" data-aos="fade-right" data-aos-delay="200"><div class="step-number">4</div><i class="fas fa-file-import process-icon"></i><h3>Application Lodgement</h3><p>We lodge your application with precision and care.</p></div>
-        <div class="process-card" data-aos="fade-right" data-aos-delay="250"><div class="step-number">5</div><i class="fas fa-champagne-glasses process-icon"></i><h3>Visa Grant & Beyond</h3><p>Celebrate your grant — we support your relocation too.</p></div>
+    <div class="timeline-btn-wrap" data-aos="zoom-in">
+        <button id="toggleTimelineBtn" class="timeline-toggle-btn">Show PR Process</button>
+    </div>
+    <div class="timeline-wrapper" id="timelineWrapper">
+        <div class="timeline-line"></div>
+        <div class="timeline-item left" data-aos="fade-right"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-icon"><i class="fas fa-user-check"></i></div><div><h3>Step 1: Check Eligibility</h3><p>The Australia PR process starts with eligibility. We ensure your profile qualifies before applying.</p></div></div></div>
+        <div class="timeline-item right" data-aos="fade-left"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-icon"><i class="fas fa-file-alt"></i></div><div><h3>Step 2: Skills Assessment</h3><p>Skill assessment is a vital step in the Australian PR process.</p></div></div></div>
+        <div class="timeline-item left" data-aos="fade-right"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-icon"><i class="fas fa-language"></i></div><div><h3>Step 3: English Test</h3><p>IELTS / PTE coaching and mock tests to improve scores.</p></div></div></div>
+        <div class="timeline-item right" data-aos="fade-left"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-icon"><i class="fas fa-paper-plane"></i></div><div><h3>Step 4: Submit EOI</h3><p>Submit Expression of Interest for PR invitation.</p></div></div></div>
+        <div class="timeline-item left" data-aos="fade-right"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-icon"><i class="fas fa-map-marked-alt"></i></div><div><h3>Step 5: State Nomination</h3><p>Apply for state nomination for Subclass 190 or 491.</p></div></div></div>
+        <div class="timeline-item right" data-aos="fade-left"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-icon"><i class="fas fa-envelope-open-text"></i></div><div><h3>Step 6: Receive ITA</h3><p>Invitation to Apply received based on your score.</p></div></div></div>
+        <div class="timeline-item left" data-aos="fade-right"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-icon"><i class="fas fa-passport"></i></div><div><h3>Step 7: Apply for PR</h3><p>Lodge Australia PR visa application with documents.</p></div></div></div>
+        <div class="timeline-item right" data-aos="fade-left"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-icon"><i class="fas fa-heartbeat"></i></div><div><h3>Step 8: Medical & PCC</h3><p>Complete health checkups and police clearance.</p></div></div></div>
+        <div class="timeline-item left" data-aos="fade-right"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-icon"><i class="fas fa-clock"></i></div><div><h3>Step 9: Wait for Processing</h3><p>DHA reviews your application and supporting documents.</p></div></div></div>
+        <div class="timeline-item right" data-aos="fade-left"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-icon"><i class="fas fa-award"></i></div><div><h3>Step 10: Visa Grant</h3><p>Receive your Australia PR visa and start your journey.</p></div></div></div>
     </div>
 </section>
 
-<!-- ========== TESTIMONIALS SECTION ========== -->
+<!-- ========== WHY VJC ========== -->
+<section class="why-vjc-section">
+    <div class="why-vjc-container">
+        <div class="why-vjc-content" data-aos="fade-right">
+            <h2><span>Why Choose</span> VJC Overseas?</h2>
+            <p class="why-desc">At VJC Overseas, we don't just process visas — we build migration journeys. With expert consultants, transparent processes, and a proven success record, we help you move abroad with confidence.</p>
+            <div class="why-grid">
+                <div class="why-card"><div class="why-icon"><i class="fas fa-bullseye"></i></div><div><h3>Expert Eligibility Check</h3><p>Profile evaluation by certified migration consultants.</p></div></div>
+                <div class="why-card"><div class="why-icon"><i class="fas fa-file-alt"></i></div><div><h3>Transparent Process</h3><p>No fake promises, only realistic guidance.</p></div></div>
+                <div class="why-card"><div class="why-icon"><i class="fas fa-globe"></i></div><div><h3>Global Visa Expertise</h3><p>Australia, Canada, UK, Europe & more.</p></div></div>
+                <div class="why-card"><div class="why-icon"><i class="fas fa-handshake"></i></div><div><h3>End-to-End Support</h3><p>From documentation to visa filing.</p></div></div>
+            </div>
+            <a href="#formfill" class="why-btn">Explore Australia PR</a>
+        </div>
+        <div class="why-vjc-images" data-aos="fade-left">
+            <div class="experience-badge"><h3>16+</h3><p>Years of Experience</p></div>
+            <img src="./images/vjcAus.png" alt="Happy Migrant Family" class="main-img">
+            <img src="./images/Gemini_Generated_Image_jlqvpljlqvpljlqv.png" alt="Visa Documents" class="small-img">
+        </div>
+    </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
 <section class="testimonials-section" id="testimonials">
-    <div class="section-title" data-aos="fade-up"><h2>Success Stories</h2></div>
+
+    <div class="section-title" data-aos="fade-up">
+        <h2>Success Stories</h2>
+    </div>
+
     <div class="testimonials-container">
-        <div class="testimonial-card" data-aos="zoom-in"><div class="client-info"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client"><div><h3>Rahul Sharma</h3><span>Skilled PR Visa</span></div></div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>VJC Overseas helped me achieve my Australia PR dream. Their process was transparent and professional.</p></div>
-        <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="100"><div class="client-info"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client"><div><h3>Sneha Reddy</h3><span>Student Visa</span></div></div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>The consultants guided me from university admission to visa approval. Highly recommended.</p></div>
-        <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200"><div class="client-info"><img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Client"><div><h3>Arjun Patel</h3><span>Employer Sponsored</span></div></div><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p>Excellent support throughout the entire migration process. The team handled everything perfectly.</p></div>
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card" data-aos="zoom-in">
+
+            <div class="client-info">
+                <img src="https://randomuser.me/api/portraits/men/54.jpg"
+                     alt="Rahul Sharma">
+
+                <div>
+                    <h3>Rahul Sharma</h3>
+                    <span>Skilled PR Visa</span>
+                </div>
+            </div>
+
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+
+            <p>
+                VJC Overseas made my Australia PR process smooth and stress-free.
+                Their guidance and support helped me achieve my dream successfully.
+            </p>
+
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card"
+             data-aos="zoom-in"
+             data-aos-delay="100">
+
+            <div class="client-info">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg"
+                     alt="Sneha Reddy">
+
+                <div>
+                    <h3>Sneha Reddy</h3>
+                    <span>Student Visa</span>
+                </div>
+            </div>
+
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+
+            <p>
+                From university applications to visa approval,
+                the VJC team supported me at every step.
+                Highly professional and friendly consultants.
+            </p>
+
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card"
+             data-aos="zoom-in"
+             data-aos-delay="200">
+
+            <div class="client-info">
+                <img src="https://randomuser.me/api/portraits/men/76.jpg"
+                     alt="Arjun Patel">
+
+                <div>
+                    <h3>Arjun Patel</h3>
+                    <span>Employer Sponsored Visa</span>
+                </div>
+            </div>
+
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+
+            <p>
+                Excellent migration assistance and quick response from the team.
+                They handled my documentation and visa process perfectly.
+            </p>
+
+        </div>
+
     </div>
+
 </section>
 
-<!-- ========== FAQ SECTION ========== -->
+<!-- ========== FAQ ========== -->
 <section class="faq-section">
-    <div class="section-title" data-aos="fade-up"><h2>Frequently Asked Questions</h2></div>
-    <div class="faq-container">
-        <div class="faq-item"><button class="faq-question">What is Australia PR? <i class="fas fa-plus"></i></button><div class="faq-answer"><p>Australia PR (Permanent Residency) allows you to live, work and study permanently in Australia with access to healthcare and social benefits.</p></div></div>
-        <div class="faq-item"><button class="faq-question">What IELTS score is required? <i class="fas fa-plus"></i></button><div class="faq-answer"><p>Usually a minimum IELTS score of 6 bands is required in each module (overall 6), depending on visa type and occupation.</p></div></div>
-        <div class="faq-item"><button class="faq-question">How long does Australia PR take? <i class="fas fa-plus"></i></button><div class="faq-answer"><p>PR processing typically takes 6 to 12 months depending on your profile, visa subclass, and document completeness.</p></div></div>
-        <div class="faq-item"><button class="faq-question">Can family members migrate with me? <i class="fas fa-plus"></i></button><div class="faq-answer"><p>Yes, spouse and dependent children can be included in most Australian visa applications.</p></div></div>
+
+    <div class="section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
     </div>
+
+    <div class="faq-container">
+
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                What is Australia PR?
+                <i class="fas fa-plus"></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Australia PR allows skilled professionals and families
+                    to live, work, and settle permanently in Australia
+                    with access to healthcare and other benefits.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                What IELTS score is required for Australia PR?
+                <i class="fas fa-plus"></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Most skilled migration visas require a minimum IELTS
+                    score of 6 bands in each module, though higher scores
+                    improve your PR points and selection chances.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                How long does the Australia PR process take?
+                <i class="fas fa-plus"></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    The complete PR process generally takes between
+                    6 to 12 months depending on occupation demand,
+                    profile strength, and visa subclass.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                Can I include my family in the PR application?
+                <i class="fas fa-plus"></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Yes, you can include your spouse and dependent children
+                    in most Australia PR visa applications.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                What are the benefits of Australia PR?
+                <i class="fas fa-plus"></i>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Australia PR provides permanent work rights,
+                    healthcare access, quality education,
+                    social benefits, and a pathway to citizenship.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
-<!-- ========== CONTACT SECTION ========== -->
-<section class="contact-section" id="contact">
-    <div class="section-title" data-aos="fade-up"><h2>Contact Us</h2></div>
-    <div class="contact-container">
-        <div class="contact-info" data-aos="fade-right">
-            <h3>Get In Touch</h3>
-            <p>Speak with our immigration experts and start your Australia PR journey today.</p>
-            <div class="contact-item"><i class="fas fa-phone-alt"></i><span>+91 9160449000</span></div>
-            <div class="contact-item"><i class="fas fa-envelope"></i><span>info@vjcoverseas.com</span></div>
-            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Hyderabad, Telangana, India</span></div>
+<!-- ========== FOOTER ========== -->
+<footer>
+
+    <div class="footer-row">
+
+        <!-- Company Info -->
+        <div class="footer-company">
+            <div class="footer-logo-text">VJC OVERSEAS</div>
+
+            <p class="footer-about">
+                Trusted Australia PR & Visa Consultants helping students,
+                professionals, and families achieve their migration dreams
+                with complete transparency and expert guidance.
+            </p>
+
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -230,178 +488,448 @@
                 <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-        <div class="contact-form-box" data-aos="fade-left">
-            <form id="contactForm">
-                <input type="text" id="contactName" placeholder="Your Name" required>
-                <input type="email" id="contactEmail" placeholder="Your Email" required>
-                <input type="tel" id="contactPhone" placeholder="Phone Number" required>
-                <textarea id="contactMessage" rows="5" placeholder="Write Your Message..." required></textarea>
-                <button type="submit" class="contact-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-            </form>
+
+        <!-- Hyderabad -->
+        <div class="location-card">
+            <h4>
+                <i class="fas fa-map-marker-alt"></i>
+                Hyderabad Office
+            </h4>
+
+            <p>
+                62/A, Ground Floor, Sundari Reddy Bhavan,
+                Vengalrao Nagar, Hyderabad - 500038
+            </p>
+
+            <div class="location-map">
+                <iframe
+                    src="https://www.google.com/maps?q=VJC+Overseas+Immigration+Visa+Consultants&output=embed"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </div>
-    </div>
-    <div class="map-container" data-aos="zoom-in">
-      <div class="map-container" data-aos="zoom-in">
-    <iframe 
-        src="https://www.google.com/maps?q=VJC+Overseas+Immigration+Visa+Consultants&output=embed"
-        width="100%" 
-        height="350" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
-</div>
-    </div>
-</section>
 
-<!-- ========== FOOTER ========== -->
-<footer>
-    <div class="footer-container">
-        <div><div class="footer-logo"><div class="footer-logo-text">VJC OVERSEAS</div></div><p class="footer-about">VJC Overseas Immigration & Visa Consultants is a trusted name in Australian migration services. We provide honest advice and end-to-end support to help you make Australia your future.</p></div>
-        <div class="footer-links"><h3>Quick Links</h3><a href="#"><i class="fas fa-home"></i> Home</a><a href="#about"><i class="fas fa-users"></i> About Us</a><a href="#pr"><i class="fas fa-passport"></i> Australia PR</a><a href="#services"><i class="fas fa-file-alt"></i> Visa Services</a><a href="#testimonials"><i class="fas fa-chart-simple"></i> Success Stories</a><a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a></div>
-        <div class="footer-links"><h3>Visa Services</h3><a href="#"><i class="fas fa-briefcase"></i> Skilled Independent</a><a href="#"><i class="fas fa-handshake"></i> Employer Sponsored</a><a href="#"><i class="fas fa-people-arrows"></i> Family & Partner</a><a href="#"><i class="fas fa-book-open"></i> Student Visa</a><a href="#"><i class="fas fa-chart-line"></i> Business Visa</a><a href="#"><i class="fas fa-plane"></i> Tourist Visa</a></div>
-        <div class="footer-links"><h3>Contact Us</h3><a href="tel:+919160449000"><i class="fas fa-phone-alt"></i> +91 9160449000</a><a href="mailto:info@vjcoverseas.com"><i class="fas fa-envelope"></i> info@vjcoverseas.com</a><a href="#"><i class="fas fa-map-marker-alt"></i> Hyderabad, India</a><a href="#"><i class="fas fa-clock"></i> Mon - Sat: 9AM - 6PM</a></div>
+        <!-- Texas -->
+        <div class="location-card">
+            <h4>
+                <i class="fas fa-map-marker-alt"></i>
+                Texas Office - USA
+            </h4>
+
+            <p>
+                7200 Preston Rd, Plano, TX 75024,
+                United States
+            </p>
+
+            <div class="location-map">
+                <iframe
+                    src="https://maps.google.com/maps?q=7200%20Preston%20Rd%20Plano%20TX%2075024&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Bangalore -->
+        <div class="location-card">
+            <h4>
+                <i class="fas fa-map-marker-alt"></i>
+                Bangalore Office
+            </h4>
+
+            <p>
+                Raheja Arcade, 5th Block,
+                Koramangala, Bengaluru - 560095
+            </p>
+
+            <div class="location-map">
+                <iframe
+                    src="https://maps.google.com/maps?q=Raheja%20Arcade%205th%20Block%20Koramangala%20Bengaluru&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
     </div>
-    <div class="footer-bottom">© 2026 VJC Overseas Immigration & Visa Consultants. All Rights Reserved.</div>
+
+    <div class="footer-bottom">
+        © 2026 VJC Overseas Immigration & Visa Consultants.
+        All Rights Reserved.
+    </div>
+
 </footer>
-
-<!-- WhatsApp Float -->
+<!-- Floating elements -->
 <a href="https://wa.me/919160449000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-
-<!-- Scroll to Top Button -->
 <a href="#" class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></a>
-
-<!-- Toast Notification -->
 <div id="toast" class="toast-notification"></div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script>
-    AOS.init({ duration: 800, once: true, offset: 40 });
+AOS.init({
+    duration: 800,
+    once: true,
+    offset: 40
+});
 
-    // Mobile Menu Logic
-    const menuToggle = document.getElementById('mobileMenuToggle');
-    const navWrapper = document.getElementById('navWrapper');
-    const body = document.body;
+/* =========================
+   MOBILE MENU
+========================= */
+const menuToggle = document.getElementById('mobileMenuToggle');
+const navWrapper = document.getElementById('navWrapper');
+const body = document.body;
 
-    function closeMenu() {
-        if (navWrapper.classList.contains('active')) {
-            navWrapper.classList.remove('active');
-            body.classList.remove('menu-open');
-            if (menuToggle) menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+function closeMenu() {
+    if (navWrapper.classList.contains('active')) {
+        navWrapper.classList.remove('active');
+        body.classList.remove('menu-open');
+
+        if (menuToggle) {
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
         }
     }
+}
 
-    function toggleMenu(e) {
-        e.stopPropagation();
-        navWrapper.classList.toggle('active');
-        body.classList.toggle('menu-open');
-        menuToggle.innerHTML = navWrapper.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-    }
+function toggleMenu(e) {
+    e.stopPropagation();
 
-    if (menuToggle && navWrapper) {
-        menuToggle.addEventListener('click', toggleMenu);
-        document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', closeMenu));
-        document.addEventListener('click', function(event) {
-            if (!navWrapper.contains(event.target) && !menuToggle.contains(event.target) && navWrapper.classList.contains('active')) closeMenu();
-        });
-        window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
-    }
+    navWrapper.classList.toggle('active');
+    body.classList.toggle('menu-open');
 
-    // Active link highlighting on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    menuToggle.innerHTML =
+        navWrapper.classList.contains('active')
+            ? '<i class="fas fa-times"></i>'
+            : '<i class="fas fa-bars"></i>';
+}
 
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            if (scrollY >= sectionTop) current = section.getAttribute('id');
-        });
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) link.classList.add('active');
-        });
+if (menuToggle && navWrapper) {
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', closeMenu);
     });
 
-    // Scroll to Top Button
-    const scrollTop = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-        scrollTop.classList.toggle('show', window.scrollY > 300);
+    document.addEventListener('click', (event) => {
+        if (
+            !navWrapper.contains(event.target) &&
+            !menuToggle.contains(event.target) &&
+            navWrapper.classList.contains('active')
+        ) {
+            closeMenu();
+        }
     });
-    scrollTop.addEventListener('click', (e) => {
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
+}
+
+/* =========================
+   ACTIVE NAVIGATION
+========================= */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove('active');
+
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+/* =========================
+   SCROLL TO TOP
+========================= */
+const scrollTop = document.getElementById('scrollTop');
+
+window.addEventListener('scroll', () => {
+
+    if (window.scrollY > 300) {
+        scrollTop.classList.add('show');
+    } else {
+        scrollTop.classList.remove('show');
+    }
+});
+
+scrollTop?.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+/* =========================
+   TOAST MESSAGE
+========================= */
+function showToast(message, isError = false) {
+
+    const toast = document.getElementById('toast');
+
+    toast.textContent = message;
+
+    toast.className =
+        `toast-notification ${isError ? 'error' : ''}`;
+
+    toast.style.display = 'block';
+
+    setTimeout(() => {
+        toast.style.display = 'none';
+    }, 4000);
+}
+
+/* =========================
+   SUCCESS POPUP
+========================= */
+function openPopup() {
+    document
+        .getElementById('successPopup')
+        .classList.add('show');
+}
+
+function closePopup() {
+    document
+        .getElementById('successPopup')
+        .classList.remove('show');
+}
+
+/* =========================
+   ELIGIBILITY FORM
+========================= */
+const eligibilityForm =
+    document.getElementById('eligibilityForm');
+
+if (eligibilityForm) {
+
+    eligibilityForm.addEventListener('submit', function(e) {
+
         e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        const name =
+            document.getElementById('fullName').value;
+
+        const email =
+            document.getElementById('email').value;
+
+        const phone =
+            document.getElementById('phone').value;
+
+        const age =
+            document.querySelector('input[name="age"]:checked')?.value;
+
+        const qualification =
+            document.querySelector('input[name="qualification"]:checked')?.value;
+
+        const experience =
+            document.querySelector('input[name="experience"]:checked')?.value;
+
+        /* Validation */
+        if (
+            !name ||
+            !email ||
+            !phone ||
+            !age ||
+            !qualification ||
+            !experience
+        ) {
+            showToast('Please fill all fields', true);
+            return;
+        }
+
+        /* Email Validation */
+        const emailPattern =
+            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if (!emailPattern.test(email)) {
+            showToast(
+                'Please enter a valid email address',
+                true
+            );
+            return;
+        }
+
+        /* Phone Validation */
+        const cleanPhone =
+            phone.replace(/\D/g, '');
+
+        if (!/^\d{10,13}$/.test(cleanPhone)) {
+            showToast(
+                'Please enter a valid phone number',
+                true
+            );
+            return;
+        }
+
+        /* OPEN SUCCESS POPUP */
+        openPopup();
+
+        /* RESET FORM */
+        eligibilityForm.reset();
+
+        document.getElementById('fileName').innerText =
+            'No file chosen';
+
+        document.querySelector(
+            'input[name="qualification"][value="Bachelor\'s"]'
+        ).checked = true;
+
+        document.querySelector(
+            'input[name="experience"][value="4–5 yrs"]'
+        ).checked = true;
     });
+}
 
-    // Toast Notification Function
-    function showToast(message, isError = false) {
-        const toast = document.getElementById('toast');
-        toast.textContent = message;
-        toast.className = `toast-notification ${isError ? 'error' : ''}`;
-        toast.style.display = 'block';
-        setTimeout(() => { toast.style.display = 'none'; }, 4000);
-    }
+/* =========================
+   CONTACT FORM
+========================= */
+const contactForm =
+    document.getElementById('contactForm');
 
-    // Eligibility Form Submission
-    const eligibilityForm = document.getElementById('eligibilityForm');
-    if (eligibilityForm) {
-        eligibilityForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('fullName').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const visa = document.getElementById('visaType').value;
-            
-            if (!name || !email || !phone || !visa) {
-                showToast('Please fill all fields', true);
-                return;
-            }
-            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-                showToast('Please enter a valid email address', true);
-                return;
-            }
-            if (!/^\d{10,13}$/.test(phone.replace(/\D/g, ''))) {
-                showToast('Please enter a valid phone number', true);
-                return;
-            }
-            
-            showToast(`Thank you ${name}! Our team will contact you soon regarding ${visa}.`);
-            eligibilityForm.reset();
-        });
-    }
+if (contactForm) {
 
-    // Contact Form Submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('contactName').value;
-            const email = document.getElementById('contactEmail').value;
-            const phone = document.getElementById('contactPhone').value;
-            const message = document.getElementById('contactMessage').value;
-            
-            if (!name || !email || !phone || !message) {
-                showToast('Please fill all fields', true);
-                return;
-            }
-            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-                showToast('Please enter a valid email address', true);
-                return;
-            }
-            
-            showToast(`Thanks ${name}! We'll get back to you within 24 hours.`);
-            contactForm.reset();
-        });
-    }
+    contactForm.addEventListener('submit', function(e) {
 
-    // FAQ Accordion
-    document.querySelectorAll('.faq-item').forEach(item => {
-        const question = item.querySelector('.faq-question');
-        question.addEventListener('click', () => {
-            document.querySelectorAll('.faq-item').forEach(faq => { if (faq !== item) faq.classList.remove('active'); });
-            item.classList.toggle('active');
-        });
+        e.preventDefault();
+
+        const name =
+            document.getElementById('contactName').value;
+
+        const email =
+            document.getElementById('contactEmail').value;
+
+        const phone =
+            document.getElementById('contactPhone').value;
+
+        const message =
+            document.getElementById('contactMessage').value;
+
+        if (!name || !email || !phone || !message) {
+
+            showToast(
+                'Please fill all fields',
+                true
+            );
+
+            return;
+        }
+
+        const emailPattern =
+            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if (!emailPattern.test(email)) {
+
+            showToast(
+                'Please enter a valid email address',
+                true
+            );
+
+            return;
+        }
+
+        openPopup();
+
+        contactForm.reset();
     });
+}
+
+/* =========================
+   FAQ ACCORDION
+========================= */
+document.querySelectorAll('.faq-item').forEach(item => {
+
+    const question =
+        item.querySelector('.faq-question');
+
+    question.addEventListener('click', () => {
+
+        document
+            .querySelectorAll('.faq-item')
+            .forEach(faq => {
+
+                if (faq !== item) {
+                    faq.classList.remove('active');
+                }
+            });
+
+        item.classList.toggle('active');
+    });
+});
+
+/* =========================
+   FILE UPLOAD
+========================= */
+const fileInput =
+    document.getElementById('resumeUpload');
+
+const fileNameSpan =
+    document.getElementById('fileName');
+
+fileInput?.addEventListener('change', function() {
+
+    if (this.files.length) {
+        fileNameSpan.innerText =
+            this.files[0].name;
+    } else {
+        fileNameSpan.innerText =
+            'No file chosen';
+    }
+});
+
+/* =========================
+   TIMELINE TOGGLE
+========================= */
+const toggleBtn =
+    document.getElementById('toggleTimelineBtn');
+
+const timelineWrapper =
+    document.getElementById('timelineWrapper');
+
+toggleBtn?.addEventListener('click', () => {
+
+    timelineWrapper.classList.toggle('active');
+
+    toggleBtn.innerText =
+        timelineWrapper.classList.contains('active')
+            ? 'Hide PR Process'
+            : 'Show PR Process';
+
+    setTimeout(() => {
+        AOS.refresh();
+    }, 300);
+});
 </script>
+<!-- Success Popup -->
+<div class="success-popup" id="successPopup">
+    <div class="popup-box">
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        <h3>Thank You for Registration!</h3>
+        <p>Our team will contact you within 24 hours.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
 </body>
 </html>
